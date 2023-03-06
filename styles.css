@@ -24,31 +24,163 @@ main{
     text-align: center;
     gap: 30px;
     padding-bottom: 100px;
+    position: relative;
+}
+
+
+#logo{
+    width: 90px;
+}
+
+#hamburger{
+    width: 45px;
+}
+
+#cancel{
+    width: 30px;
+    display: none;
+}
+
+#dropdown{
+    position: absolute;
+    width: 80%;
+    background-color: #fff;
+    top: 150px;
+    z-index: 10;
+    display: none;
+    flex-direction: column;
+    gap:20px;
+    padding: 30px;
+    border-radius: 5px;
+    z-index: 100;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    -moz-box-shadow: rgba(0,0,0,0.3) 0 1px 3px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0 1px 3px;
+    align-items: center;
+    justify-content: center;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul *{
+    list-style: none;
+}
+
+ul dl{
+    color: hsl(208, 49%, 24%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: center;
+}
+
+.rotated{
+    transform: rotate(180deg);
+}
+
+.list li{
+    color: hsl(209, 37%, 48%);
+    font-family: 'Overpass', sans-serif;
+    font-weight: 600;
+}
+
+#dropdown li:hover{
+    background: linear-gradient( 90deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+}
+
+.list{
+    display: none;
+    background-color: #efeff1;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px 70px;
+    gap: 20px;
+    width: 100%;
+    flex-direction: column;
+}
+
+.expanded{
+    display: flex;
+}
+
+.authenticate{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    border-top: 1px solid #efeff1;
+}
+
+
+
+.login{
+    background-image: none;
+    background-color: #fff;
+    color: hsl(208, 49%, 24%);
+}
+
+.sign-up{
+    background: linear-gradient(45deg, hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    color: white;
 }
 
 #hero{
     /* padding:200px 40px 150px 40px; */
-    background-color: hsl(355, 100%, 74%);
-    /* border-bottom-left-radius: 150px; */
+    background : linear-gradient(hsl(13, 100%, 72%), hsl(353, 100%, 62%));
+    border-bottom-left-radius: 125px;
     display: flex;
     flex-direction: column;
     position: relative;
     height: 600px;
     width: 100vw;
     justify-content: center;
-    justify-content: center;
-    padding: 50px;
-    gap: 20px;
+    align-items: center;
     margin-bottom: 50px;
     color: white;
+    overflow: hidden;
 }
 
-#hero img{
-    width: 100%;
+#background{
+    width: 200%;
+    position: absolute;
+    height: 300%;
+    left: -20px;
+    top: -500px;
+    object-fit: cover;
+}
+.hero-content{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.hero-content h1{
+    font-size: 32px;
+}
+
+nav{
     position: absolute;
     top: 0;
-    bottom: 0;
-    height: 100%;
+    width:80%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
 }
 
 #CTA{
@@ -61,7 +193,7 @@ main{
 button{
     border-radius: 20px;
     padding: 10px;
-    width: 125px;
+    width: 150px;
     border: none;
     font-weight: 600;
 }
@@ -69,10 +201,6 @@ button{
 #Start, #Learn:hover{
     background-color: white;
     color: hsl(356, 100%, 66%);
-}
-
-#Start{
-
 }
 
 #Learn, #Start:hover{
@@ -85,7 +213,7 @@ button{
     display: flex;
     flex-direction: column;
     gap: 35px;
-    padding: 0px 40px;
+    padding: 0px 20%;
     width: 100vw;
 }
 
@@ -117,13 +245,13 @@ button{
 .dark div{
     background-color: #373854;
     width: 100%;
-    padding:200px 40px 150px 40px;
+    padding:200px 20% 150px 20%;
     display: flex;
     flex-direction: column;
     gap: 30px;
     color: white;
-    border-top-right-radius: 80px;
-    border-bottom-left-radius: 80px;
+    border-top-right-radius: 100px;
+    border-bottom-left-radius: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -178,7 +306,7 @@ footer{
     align-items: center;
     justify-content: center;
     padding-top: 75px;
-    border-top-right-radius: 90px;
+    border-top-right-radius: 160px;
 }
 
 footer img{
@@ -190,7 +318,6 @@ footer img{
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    list-style: none;
     gap: 5px;
 }
 
